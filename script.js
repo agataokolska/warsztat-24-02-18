@@ -1,13 +1,12 @@
-// function declaration
-function hello(name, numberOfLogs){
-    for(var i = 0; i < numberOfLogs; i++) {
-    console.log("Hello " + name + "!")
-    }
+setInterval(
+    function() {
+        console.log("Minęła sekunda!")
+    },
+    1000
+)
+
+function add(a, b) {
+
+    return a + b
 }
-//function call
-
-hello("Mateusz", 1) //passing attribute Mateusz
-hello("Ala", 2)
-hello("Ela", 3)
-hello({name: "Stanisława"}, 1)
-
+var result = add(5,8)
