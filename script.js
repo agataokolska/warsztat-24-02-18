@@ -3,7 +3,8 @@
 
     function addPoint(){  
         points++   
-        console.log('Dodano punkt!', points)  
+        console.log('Dodano punkt!', points) 
+        makeMole() //powstaje nowy kret po kliknięciu
     }
 
     function makeMole(){
@@ -22,7 +23,7 @@
         mole.style.left = molePosX + 'px'
         mole.style.top = molePosY + 'px'
 
-        mole.addEventListener(
+        mole.addEventListener( //nasluchiwacz kliknięcia
             'click',
             function(){
                 mole.remove()  //po kliknieciu w kreta usuń go
