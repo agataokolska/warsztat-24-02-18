@@ -2,8 +2,12 @@
 
     function makeMole(){
 
-        var molePosX = 100
-        var molePosY = 100
+        var molePosX = Math.round(
+            Math.random() * (window.innerWidth - window.innerHeight / 10)
+        )
+        var molePosY = Math.round(
+            Math.random() * (window.innerHeight - window.innerHeight / 10)
+        )
         var mole = document.createElement('div')
 
         mole.classList.add('mole') //dodano klase css od mole
