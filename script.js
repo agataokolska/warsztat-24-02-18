@@ -1,6 +1,9 @@
 (function(){
-    function addPoint(){     
-        console.log('Dodano punkt!')  
+    var points = 0
+
+    function addPoint(){  
+        points++   
+        console.log('Dodano punkt!', points)  
     }
 
     function makeMole(){
