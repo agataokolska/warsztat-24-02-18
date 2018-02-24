@@ -14,7 +14,9 @@
     function redudeTime(){
         time--
         displayTime(time)
-
+        if(time === 0){  //jesli czas 0 to konczy gre
+            endGame()
+        }
     }
 
 
@@ -56,8 +58,17 @@
         document.querySelector('body').appendChild(mole) // adding mole to body
         return mole // zwracamy nowy obiekt kreta
 
+
+            
     }
 
+
+    function endGame(){
+        clearInterval(gameIntervalId)
+        mole.remove()
+        alert('Game was ended!\nYour score was: ' + points + ' !') 
+        
+    }
 
 function init(){   //inicjalizacja gry
     points = 0
