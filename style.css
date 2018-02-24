@@ -6,6 +6,7 @@ body{
     background-color: green;
     width: 100vw;
     height: 100vw;
+    font-family: sans-serif;
 }
 
 .mole{
@@ -32,6 +33,7 @@ body{
     top: 0;
     font-size: 3em;
     color: white;
+}
 
 .messages{
     position: absolute;
@@ -40,4 +42,28 @@ body{
     top: 0;
     font-size: 3em;
     color: red;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 99999;
+    max-width: 90vw;
+
+}
+
+.modal button{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.end modal{
+    display: none;
 }
