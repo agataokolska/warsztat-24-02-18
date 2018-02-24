@@ -7,7 +7,6 @@
 
     function addPoint(){  
         points++   
-        console.log('Dodano punkt!', points) 
         displayPoints(points)
     }
 
@@ -51,7 +50,8 @@
             'click',
             function(){
                 mole.remove()  //po kliknieciu w kreta usuń go
-                addPoint()   
+                addPoint()  
+                flashBackground() 
             }
         )
 
@@ -69,6 +69,19 @@
         alert('Game was ended!\nYour score was: ' + points + ' !') 
         
     }
+
+    function flashBackground(){   //zmiana koloru tla gdy się kliknie na kreta
+        var body = document.querySelector('body')
+        body.style.backgroundColor = 'red'
+        setTimeout(
+            function(){
+                body.style.backgroundColor = 'green'
+            },
+            100
+        )
+
+    }
+
 
 function init(){   //inicjalizacja gry
     points = 0
