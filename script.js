@@ -1,3 +1,5 @@
+(function (){
+
 var secondsCounter = 1
 
 var intervalId = setInterval(
@@ -11,6 +13,6 @@ setTimeout (
     function() {
         clearInterval(intervalId)
     },
-    500
+    5000
 )
-
+})()
