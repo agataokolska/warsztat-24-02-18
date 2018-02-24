@@ -1,10 +1,23 @@
 (function(){
-    var points = 0
+    var points
+    var time
+    var mole
 
     function addPoint(){  
         points++   
         console.log('Dodano punkt!', points) 
-        makeMole() //powstaje nowy kret po kliknięciu
+        displayPoints(points)
+    }
+
+    function displayPoints(pointsParam) {    //wyświetla punkty po kliknieciu
+        var pointsContainer = document.querySelector('.points')
+        pointsContainer.innerText = pointsParam
+    }
+
+
+    function displayTime(timeParam) {    //wyświetla punkty po kliknieciu
+        var timeContainer = document.querySelector('.time')
+        timeContainer.innerText = timeParam
     }
 
     function makeMole(){
@@ -32,8 +45,21 @@
         )
 
         document.querySelector('body').appendChild(mole) // adding mole to body
+        return mole // zwracamy nowy obiekt kreta
+
     }
 
-makeMole()
+
+function init(){   //inicjalizacja gry
+    points = 0
+    time = 10
+    mole = makeMole()
+
+    displayPoints(points)
+    displayTime(time)
+}
+
+
+init()
 
 })()

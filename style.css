@@ -18,13 +18,20 @@ body{
     background-repeat: no-repeat;
 }
 
-.points, .time{
+.points,{
     position: absolute;
     left: 0;
     top: 0;
     font-size: 3em;
     color: white;
 }
+
+.time{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 3em;
+    color: white;
 
 .messages{
     position: absolute;
