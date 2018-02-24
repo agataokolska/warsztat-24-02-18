@@ -66,8 +66,20 @@
     function endGame(){
         clearInterval(gameIntervalId)
         mole.remove()
-        alert('Game was ended!\nYour score was: ' + points + ' !') 
         
+        document.querySelector('.end-modal .score')
+            .innerText = points + ' punktów!'
+
+        document.querySelector('.end-modal')
+            .style.display = "block"
+
+        document.querySelector('.end-modal button')
+            addEventListener(
+                'click',
+                function(){
+                   window.location = '' //przejście do poprzedniego okna
+                }
+            )
     }
 
     function flashBackground(){   //zmiana koloru tla gdy się kliknie na kreta
@@ -82,15 +94,8 @@
 
     }
 
-
-function init(){   //inicjalizacja gry
-    points = 0
-    time = 10
+function startGame(){
     mole = makeMole()
-
-    displayPoints(points)
-    displayTime(time)
-
     gameIntervalId = setInterval(    //kret znika po 1s i pojawia się w nowym miejscu
         function(){
             mole.remove()
@@ -99,6 +104,26 @@ function init(){   //inicjalizacja gry
         },
         1000
     )
+}
+
+function init(){   //inicjalizacja gry
+    points = 0
+    time = 10
+    mole = null
+
+    displayPoints(points)
+    displayTime(time)
+
+    document.querySelector('.start-modal button')
+        .addEventListener(
+            'click',
+            function(){
+                document.querySelector('.start-modal')
+                    .style.display = 'none'
+         startGame()
+            }
+        )
+
 }
 
 
