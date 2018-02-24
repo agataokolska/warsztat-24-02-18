@@ -1,10 +1,16 @@
+var secondsCounter = 1
 
-
-setInterval(
+var intervalId = setInterval(
     function() {
-        console.log("Minęła sekunda!")
+        console.log(secondsCounter++)
     },
     1000
 )
 
+setTimeout (
+    function() {
+        clearInterval(intervalId)
+    },
+    500
+)
 
