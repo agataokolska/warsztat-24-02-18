@@ -11,6 +11,13 @@
         displayPoints(points)
     }
 
+    function redudeTime(){
+        time--
+        displayTime(time)
+
+    }
+
+
     function displayPoints(pointsParam) {    //wyświetla punkty po kliknieciu
         var pointsContainer = document.querySelector('.points')
         pointsContainer.innerText = pointsParam
@@ -64,6 +71,7 @@ function init(){   //inicjalizacja gry
         function(){
             mole.remove()
             mole = makeMole()
+            redudeTime()
         },
         1000
     )
