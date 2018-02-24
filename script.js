@@ -2,6 +2,8 @@
     var points
     var time
     var mole
+    var gameIntervalId
+
 
     function addPoint(){  
         points++   
@@ -57,6 +59,14 @@ function init(){   //inicjalizacja gry
 
     displayPoints(points)
     displayTime(time)
+
+    gameIntervalId = setInterval(    //kret znika po 1s i pojawia się w nowym miejscu
+        function(){
+            mole.remove()
+            mole = makeMole()
+        },
+        1000
+    )
 }
 
 
