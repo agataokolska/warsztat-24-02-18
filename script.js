@@ -15,7 +15,7 @@
     }
 
 
-    function displayTime(timeParam) {    //wyświetla punkty po kliknieciu
+    function displayTime(timeParam) {    //wyświetla czas po kliknieciu
         var timeContainer = document.querySelector('.time')
         timeContainer.innerText = timeParam
     }
