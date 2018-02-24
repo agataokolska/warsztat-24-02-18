@@ -10,7 +10,7 @@
         displayPoints(points)
     }
 
-    function redudeTime(){
+    function reduceTime(){
         time--
         displayTime(time)
         if(time === 0){  //jesli czas 0 to konczy gre
@@ -95,7 +95,7 @@ function init(){   //inicjalizacja gry
         function(){
             mole.remove()
             mole = makeMole()
-            redudeTime()
+            reduceTime()
         },
         1000
     )
