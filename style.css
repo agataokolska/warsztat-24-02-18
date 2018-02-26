@@ -3,16 +3,16 @@
 }
 
 body{
-    background-color: green;
+    background-color: rgb(243, 240, 243);
     width: 100vw;
     height: 100vw;
-    font-family: sans-serif;
+    font-family: fantasy;
 }
 
 .mole{
     position: absolute;
-    width: 10vh;
-    height: 10vh;
+    width: 30vh;
+    height: 30vh;
     background-image: url('mole.png');
     background-size: contain;
     background-position: center center;
@@ -23,16 +23,16 @@ body{
     position: absolute;
     left: 0;
     top: 0;
-    font-size: 3em;
-    color: white;
+    font-size: 2em;
+    color: rgb(223, 66, 183);
 }
 
 .time{
     position: absolute;
     right: 0;
     top: 0;
-    font-size: 3em;
-    color: white;
+    font-size: 2em;
+    color: rgb(223, 66, 183);
 }
 
 .messages{
@@ -54,13 +54,16 @@ body{
     text-align: center;
     z-index: 99999;
     max-width: 90vw;
+    border: solid;
+    border-color: rgb(128, 128, 128)
 
 }
 
 .modal button{
-    background-color: blue;
+    background-color: rgb(223, 66, 183);
     color: white;
-    border: none;
+    border: solid;
+    border-color: rgb(128, 128, 128)
     padding: 10px;
 }
 

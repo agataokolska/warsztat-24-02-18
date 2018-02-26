@@ -21,13 +21,13 @@
 
     function displayPoints(pointsParam) {    //wyświetla punkty po kliknieciu
         var pointsContainer = document.querySelector('.points')
-        pointsContainer.innerText = pointsParam
+        pointsContainer.innerText = "Punkty: " + pointsParam
     }
 
 
     function displayTime(timeParam) {    //wyświetla czas po kliknieciu
         var timeContainer = document.querySelector('.time')
-        timeContainer.innerText = timeParam
+        timeContainer.innerText = "Czas: " + timeParam
     }
 
     function makeMole(){
@@ -84,10 +84,10 @@
 
     function flashBackground(){   //zmiana koloru tla gdy się kliknie na kreta
         var body = document.querySelector('body')
-        body.style.backgroundColor = 'red'
+        body.style.backgroundColor = 'grey'
         setTimeout(
             function(){
-                body.style.backgroundColor = 'green'
+                body.style.backgroundColor = 'rgb(243, 240, 243)'
             },
             100
         )
@@ -108,7 +108,7 @@ function startGame(){
 
 function init(){   //inicjalizacja gry
     points = 0
-    time = 10
+    time = 30
     mole = null
 
     displayPoints(points)
